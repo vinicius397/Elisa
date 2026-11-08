@@ -4,3 +4,6 @@ admin/data/attempts.php
 admin/data/backups/
 .DS_Store
 Thumbs.db
+
+# Capturas de tela de conferência (não fazem parte do site)
+.capturas/
