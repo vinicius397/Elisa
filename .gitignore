@@ -1,0 +1,6 @@
+# Arquivos criados pelo painel na hospedagem (senha, tentativas, histórico)
+admin/data/auth.php
+admin/data/attempts.php
+admin/data/backups/
+.DS_Store
+Thumbs.db

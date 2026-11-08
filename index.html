@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--META:START-->
+<title>Elisa Vasconcelos — Escritório de Arquitetura</title>
+<meta name="description" content="Escritório de arquitetura em São José do Rio Preto / São Paulo. Projetos residenciais, comerciais e de interiores.">
+<meta property="og:title" content="Elisa Vasconcelos — Escritório de Arquitetura">
+<meta property="og:description" content="Escritório de arquitetura em São José do Rio Preto / São Paulo. Projetos residenciais, comerciais e de interiores.">
+<!--META:END-->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#F4F2EE">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>
+  document.documentElement.classList.add('js');
+  // pré-carrega as fontes quando o site está online (não funciona abrindo o arquivo direto)
+  if (location.protocol !== 'file:') ['cormorant-garamond', 'cormorant-garamond-italic', 'epilogue'].forEach(function (f) {
+    var l = document.createElement('link'); l.rel = 'preload'; l.as = 'font'; l.type = 'font/woff2'; l.crossOrigin = 'anonymous';
+    l.href = 'assets/fonts/' + f + '.woff2'; document.head.appendChild(l);
+  });
+</script>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#galeria">Pular para a galeria</a>
+
+<header class="top" id="top">
+  <a class="top__brand" href="#inicio" data-r="brand"></a>
+  <nav class="top__nav" aria-label="Principal" data-r="nav"></nav>
+  <button class="top__menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav class="menu__nav" aria-label="Menu" data-r="menu"></nav>
+  <p class="menu__foot" data-r="menuFoot"></p>
+</div>
+
+<main>
+  <section class="hero" id="inicio" data-r="hero" aria-label="Abertura"></section>
+  <section class="gallery" id="galeria" data-r="gallery" aria-label="Galeria"></section>
+  <section class="series" id="projetos" data-r="series" aria-label="Projetos"></section>
+  <section class="about" id="sobre" data-r="about" aria-label="Sobre"></section>
+  <section class="services" id="servicos" data-r="services" aria-label="Serviços e valores"></section>
+  <section class="clients" id="clientes" data-r="clients" aria-label="Clientes"></section>
+  <section class="contact" id="contato" data-r="contact" aria-label="Contato"></section>
+</main>
+
+<footer class="foot" data-r="footer"></footer>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Visualizador de fotos" hidden>
+  <div class="viewer__stage"></div>
+  <div class="viewer__bar">
+    <p class="viewer__count" aria-live="polite"></p>
+    <p class="viewer__caption"></p>
+    <div class="viewer__ctrl">
+      <button type="button" class="viewer__btn" data-v="prev" aria-label="Foto anterior">←</button>
+      <button type="button" class="viewer__btn" data-v="next" aria-label="Próxima foto">→</button>
+      <button type="button" class="viewer__btn viewer__close" data-v="close">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+
+<noscript><p class="noscript">Este site precisa de JavaScript ativado para mostrar as fotos e os textos.</p></noscript>
+
+<script src="content/content.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
