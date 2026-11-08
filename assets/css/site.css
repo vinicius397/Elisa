@@ -402,13 +402,14 @@ html.is-locked, html.is-locked body { overflow: hidden; }
   :root { --top-h: 60px; }
   body { font-size: 15px; }
   .top__brand { font-size: 19px; }
-  .hero { min-height: max(100svh, 620px); }
-  .hero__figure { width: 60vw; top: calc(var(--top-h) + 4px); height: calc(max(100svh, 620px) * .6); }
+  /* no celular: nome por cima da foto, texto sempre abaixo dela */
+  .hero { min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr); padding-bottom: 44px; }
+  .hero__figure { position: relative; grid-row: 1; grid-column: 1; right: auto; top: auto; justify-self: end; margin-top: calc(var(--top-h) + 4px); width: 60vw; height: clamp(340px, 58svh, 150vw); }
   .hero__caption { flex-direction: column; gap: 2px; }
   .hero__caption span + span { display: none; }
-  .hero__name { font-size: 19vw; padding-top: calc(var(--top-h) + 15svh); }
+  .hero__name { grid-row: 1; grid-column: 1; align-self: start; font-size: 19vw; padding-top: calc(var(--top-h) + clamp(70px, 14svh, 140px)); }
   .hero__line--2 { --step: 2vw; }
-  .hero__info { left: var(--gut); right: var(--gut); bottom: 28px; width: auto; gap: 6px; }
+  .hero__info { position: relative; grid-row: 2; left: auto; right: auto; bottom: auto; width: auto; gap: 6px; margin-top: 52px; }
   .hero__intro { font-size: 20px; margin-top: 6px; }
   .hero__cta { margin-top: 8px; }
   .hero__edge { display: none; }
